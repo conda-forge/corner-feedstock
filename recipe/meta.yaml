@@ -1,6 +1,6 @@
 {% set name = "corner" %}
-{% set version = "2.0.1" %}
-{% set sha256 = "102e22797ee75d1432b6dc66aa2850f61388996ece66fd6600508742d2a7b88f" %}
+{% set version = "2.1.0" %}
+{% set sha256 = "61d6f4936436969668f17918e98b7f411fbd3514cc50e89ef7543016f970eb65" %}
 
 package:
   name: {{ name|lower }}
@@ -13,8 +13,8 @@ source:
 
 build:
   noarch: python
-  number: 1003
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -35,7 +35,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Make some beautiful corner plots of samples.'
+  summary: Make some beautiful corner plots of samples.
 
   description: |
     corner uses matplotlib to visualize multidimensional samples using a scatterplot matrix.

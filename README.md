@@ -5,7 +5,7 @@ Home: http://github.com/dfm/corner.py
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Make some beautiful corner plots of samples.
 

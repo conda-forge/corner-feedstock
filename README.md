@@ -5,9 +5,13 @@ Home: http://github.com/dfm/corner.py
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/corner-feedstock/blob/master/LICENSE.txt)
 
 Summary: Make some beautiful corner plots of samples.
+
+Development: https://github.com/dfm/corner.py
+
+Documentation: http://corner.readthedocs.io/
 
 corner uses matplotlib to visualize multidimensional samples using a scatterplot matrix.
 In these visualizations, each one- and two-dimensional projection of the sample is

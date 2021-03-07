@@ -37,8 +37,7 @@ test:
 
 about:
   home: http://github.com/dfm/corner.py
-  license: BSD
-  license_family: BSD
+  license: BSD-2-Clause
   license_file: LICENSE
   summary: Make some beautiful corner plots of samples.
 

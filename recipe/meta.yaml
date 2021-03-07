@@ -20,13 +20,12 @@ build:
 
 requirements:
   host:
+    - python >=3.6
     - pip
-    - python
-    - setuptools
+    - setuptools_scm
   run:
-    - python
-    - numpy
-    - matplotlib-base
+    - python >=3.6
+    - arviz >=0.9
 
 test:
   imports:
@@ -38,8 +37,8 @@ test:
 
 about:
   home: http://github.com/dfm/corner.py
-  license: MIT
-  license_family: MIT
+  license: BSD
+  license_family: BSD
   license_file: LICENSE
   summary: Make some beautiful corner plots of samples.
 

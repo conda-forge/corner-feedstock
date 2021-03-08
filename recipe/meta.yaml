@@ -1,6 +1,6 @@
 {% set name = "corner" %}
-{% set version = "2.1.0" %}
-{% set sha256 = "61d6f4936436969668f17918e98b7f411fbd3514cc50e89ef7543016f970eb65" %}
+{% set version = "2.2.0" %}
+{% set sha256 = "a3b0e0f32cc9bcf9a698532cf59e9ab5b25edf42c67146545af437d16d5bac08" %}
 
 package:
   name: {{ name|lower }}
@@ -10,36 +10,28 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
-  patches:
-    - remove-unnecessary-deps.patch
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
+    - python >=3.6
     - pip
-    - python
-    - setuptools
+    - setuptools_scm
   run:
-    - python
-    - numpy
-    - matplotlib-base
+    - python >=3.6
+    - arviz >=0.9
 
 test:
   imports:
     - corner
-  requires:
-    - pip
-  commands:
-    - pip check
 
 about:
   home: http://github.com/dfm/corner.py
-  license: MIT
-  license_family: MIT
+  license: BSD-2-Clause
   license_file: LICENSE
   summary: Make some beautiful corner plots of samples.
 

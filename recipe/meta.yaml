@@ -28,10 +28,6 @@ requirements:
 test:
   imports:
     - corner
-  requires:
-    - pip
-  commands:
-    - pip check
 
 about:
   home: http://github.com/dfm/corner.py

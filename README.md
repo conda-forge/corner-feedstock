@@ -3,7 +3,7 @@ About corner
 
 Home: http://github.com/dfm/corner.py
 
-Package license: MIT
+Package license: BSD-2-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/corner-feedstock/blob/master/LICENSE.txt)
 

@@ -1,6 +1,6 @@
 {% set name = "corner" %}
-{% set version = "2.2.1" %}
-{% set sha256 = "d39f1d9ad31093bb2aa06d80b23573e51ad7130af4c4af0931fca745a64751e5" %}
+{% set version = "2.2.2" %}
+{% set sha256 = "4bc79f3b6778c270103f0926e64ef2606c48c3b6f92daf5382fc4babf5d608d1" %}
 
 package:
   name: {{ name|lower }}

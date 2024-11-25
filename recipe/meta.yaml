@@ -1,6 +1,6 @@
 {% set name = "corner" %}
-{% set version = "2.2.2" %}
-{% set sha256 = "4bc79f3b6778c270103f0926e64ef2606c48c3b6f92daf5382fc4babf5d608d1" %}
+{% set version = "2.2.3" %}
+{% set sha256 = "471b7b63395d8f1dee176bb779348ade38d56abd23404a48802a593607745e1c" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
@@ -18,16 +18,19 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
-    - setuptools_scm
+    - hatchling
+    - hatch-vcs
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - arviz >=0.9
 
 test:
   imports:
     - corner
+  requires:
+    - python {{ python_min }}
 
 about:
   home: http://github.com/dfm/corner.py

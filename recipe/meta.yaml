@@ -18,16 +18,19 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
-    - setuptools_scm
+    - hatchling
+    - hatch-vcs
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - arviz >=0.9
 
 test:
   imports:
     - corner
+  requires:
+    - python {{ python_min }}
 
 about:
   home: http://github.com/dfm/corner.py

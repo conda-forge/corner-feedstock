@@ -1,6 +1,6 @@
 {% set name = "corner" %}
-{% set version = "2.2.3" %}
-{% set sha256 = "471b7b63395d8f1dee176bb779348ade38d56abd23404a48802a593607745e1c" %}
+{% set version = "2.3.0" %}
+{% set sha256 = "685ecb1e778809b78c6783f4a4691d023bbd9f781c9efda683c2b793878b561c" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
